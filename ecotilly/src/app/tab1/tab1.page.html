@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        STATS
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="ionRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+        refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title>Total Orders: {{totalOrdersCount}}</ion-card-title>
+        <ion-card-title>Total Products: {{totalProductsCount}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title>Orders Trend</ion-card-title>
+        <ion-card-subtitle>Number of Order per date</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barChart></canvas>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title>User Purchase Trend</ion-card-title>
+        <ion-card-subtitle>Number of Order per user</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #pieChart></canvas>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title>Orders List</ion-card-title>
+        <ion-card-subtitle>List of Order per user</ion-card-subtitle>
+      </ion-card-header>
+      <ngx-datatable class="material" [rows]="rows" [scrollbarH]="true" [columnMode]="'force'" [limit]="5" [sortType]="'multi'" [reorderable]="true">
+        <ngx-datatable-column name="Name"></ngx-datatable-column>
+        <ngx-datatable-column name="Gender"></ngx-datatable-column>
+        <ngx-datatable-column name="Orders"></ngx-datatable-column>
+      </ngx-datatable>
+    </ion-card>
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title>Products Trend</ion-card-title>
+        <ion-card-subtitle>Top Products purchased most</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #topProductsChart></canvas>
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>

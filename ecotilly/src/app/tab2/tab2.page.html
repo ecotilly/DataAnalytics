@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      ORG SETTINGS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>Notifications</ion-card-header>
+    <ion-list class="md list-md hydrated">
+        <ion-item class="item-label item md in-list ion-focusable hydrated">
+          <ion-label id="ion-tg-1-lbl" class="sc-ion-label-md-h sc-ion-label-md-s md hydrated">Mobile SMS</ion-label>
+          <ion-toggle disabled=true slot="start" name="blueberry" checked="" role="checkbox" aria-checked="true" aria-labelledby="ion-tg-1-lbl" class="md in-item toggle-checked interactive hydrated"><input type="hidden" class="aux-input" name="blueberry" value="on"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="item-label item md in-list ion-focusable hydrated">
+          <ion-label id="ion-tg-7-lbl" class="sc-ion-label-md-h sc-ion-label-md-s md hydrated">WhatsApp</ion-label>
+          <ion-toggle  disabled=true slot="start" name="apple" color="secondary" checked="" role="checkbox" aria-checked="true" aria-labelledby="ion-tg-7-lbl" class="ion-color ion-color-secondary md in-item toggle-checked interactive hydrated"><input type="hidden" class="aux-input" name="apple" value="on"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="item-label item md in-list ion-focusable hydrated">
+          <ion-label id="ion-tg-4-lbl" class="sc-ion-label-md-h sc-ion-label-md-s md hydrated">Email</ion-label>
+          <ion-toggle disabled=true slot="start" name="grape" color="tertiary" checked="" role="checkbox" aria-checked="true" aria-labelledby="ion-tg-4-lbl" class="ion-color ion-color-tertiary md in-item toggle-checked interactive hydrated"><input type="hidden" class="aux-input" name="grape" value="on"></ion-toggle>
+        </ion-item>
+      </ion-list>
+  </ion-card>
+</ion-content>

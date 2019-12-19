@@ -1,0 +1,49 @@
+#invoice-POS
+    center#top
+        .logo
+        .info
+            clientId Retail
+        // End Info
+    // End InvoiceTop
+    #mid
+        .info
+            h2 Contact Info
+            p
+                | Address :  #{userName}
+                br
+                | Email : #{userEmail}
+                br
+                | Phone : #{userMobile}
+    // End Invoice Mid
+    #bot
+        #table
+            table
+                tr.tabletitle
+                    td.item
+                        h2 Item
+                    td.Hours
+                        h2 Qty
+                    td.Rate
+                        h2 Sub Total
+                each product in products
+                    tr.service
+                        each key,val in product
+                            td.itemtext=key
+                br
+                tr.tabletitle
+                    td
+                    td.Rate
+                        h2 tax
+                    td.payment
+                        h2 #{orderTax}
+                tr.tabletitle
+                    td
+                    td.Rate
+                        h2 Total
+                    td.payment
+                        h2 #{orderAmount}
+        #legalcopy
+            p.legal
+                strong Thank you for your business!
+                |   Payment is expected within 31 days; please process this invoice within that time. There will be a 5% interest charge per month on late invoices.
+    // End InvoiceBot
